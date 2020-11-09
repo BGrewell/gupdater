@@ -102,6 +102,7 @@ func (au *AutoUpdater) Update(name string) (err error) {
 				// stop the app
 				_, err = ExecuteCommand(app.StopCmd)
 
+				_, err = ExecuteCommand(fmt.Sprintf("rm -rf %s/*", app.LocalDir))
 				_, err = ExecuteCommand(fmt.Sprintf("tar -xf %s -C %s", tempTar, app.LocalDir))
 				if err != nil {
 					return err
