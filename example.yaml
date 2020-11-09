@@ -1,0 +1,20 @@
+---
+-
+    name: wemo-web
+    update_url: https://updates.k3rn3l.io/wemo-web/deploy
+    local_dir: /opt/wemo-web
+    version_file: last_update.txt
+    package_name: wemo-web.tar
+    stop_cmd: systemctl stop wemoweb
+    update_cmd: npm install
+    start_cmd: systemctl start wemoweb
+-
+    name: systeminfo-api
+    update_url: https://updates.k3rn3l.io/systeminfo-api/deploy
+    local_dir: /opt/systeminfo-api
+    version_file: last_update.txt
+    package_name: systeminfo-api.tar
+    stop_cmd: systemctl stop systeminfo
+    update_cmd: npm install
+    start_cmd: systemctl start systeminfo
+
