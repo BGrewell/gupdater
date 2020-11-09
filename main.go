@@ -36,6 +36,7 @@ func main() {
 				err = updater.Update(app)
 				if err != nil {
 					log.Printf(" %s\n", err)
+					os.Exit(-1)
 				}
 			}
 			nextCheck = time.Now().Unix() + 5
